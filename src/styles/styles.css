@@ -27,10 +27,15 @@ header {
 }
 
 .header-content {
+  text-decoration: none;
   font-weight: 400;
   padding: 2rem;
   transition: all 0.25s;
   cursor: pointer;
+}
+
+.header-content:visited {
+  color: white;
 }
 
 .header-content:is(:active, :hover, :focus) {
