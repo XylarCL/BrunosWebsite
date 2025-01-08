@@ -26,7 +26,16 @@ header {
 }
 
 .header-content {
+  font-weight: 400;
   padding: 2rem;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.header-content:is(:active, :hover, :focus) {
+  color: rgb(209, 108, 26);
+  transform: scale(1.05);
+  transition: all 0.25s;
 }
 
 /* Project Tile component styling */
@@ -36,13 +45,23 @@ header {
   align-items: center;
 }
 .projectTile {
+  cursor: pointer;
   margin: 1rem;
   padding: 1rem;
   width: 400px;
   height: 200px;
   box-shadow: 1px 0px 10px black;
   border-radius: 15px;
+  transition: all 0.25s;
 }
+
+.projectTile:is(:active, :hover, :focus) {
+  color: rgb(209, 108, 26);
+  transform: scale(1.05);
+  transition: all 0.25s;
+}
+
+
 .projectTile-img {
 
 }
