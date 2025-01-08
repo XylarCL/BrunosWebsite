@@ -16,6 +16,7 @@ body {
 
 /* Header component styling*/
 header {
+  z-index: 1;
   background-color: hsl(0, 0%, 10%);
   display: flex;
   width: 100%;
