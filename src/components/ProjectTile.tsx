@@ -7,7 +7,7 @@ interface Props {
 function ProjectTile({image, title, info}: Props) {
     return (
         <div key={"Project Tile Div " + title} className="projectTile">
-            <img key={image} className="projectTile-img" src={"%PUBLIC_URL%/assets/imgs/projectTileImages/" + image} height="100px" width="100px"></img>
+            <img key={image} className="projectTile-img" src={"/assets/imgs/projectTileImages/" + image} height="100px" width="100px"></img>
             <h3 key={title} className="projectTile-title">{title}</h3>
             <p key={info} className="projectTile-info">{info}</p>
         </div>
