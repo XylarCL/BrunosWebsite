@@ -74,6 +74,7 @@ header {
 /* Side Header component styling */
 /*#region*/
 .sideHeader {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -88,6 +89,36 @@ header {
   padding: var(--margin-xs);
   margin: var(--margin-xs);
 }
+
+/*
+.slideRight {
+  width: 10000px;
+  overflow: hidden;
+  margin-left: 70px;
+  max-width: 220px;
+  position: absolute;
+  bottom: 50%;
+}
+
+.slideRight-text {
+  text-decoration: none;
+  color: white;
+  background-color: var(--colour-background);
+}
+
+.slideRight:hover > .slideRight-text {
+  animation: 2s slideIn;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: -500px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+*/
 
 .sideHeader-VR {
   height: 20vh;
@@ -105,41 +136,52 @@ header {
 }
 
 .heroSection-title {
-  font-size: var(--margin-xxxxxl);
-  line-height: 1.1;
+  font-size: max(8vw, var(--margin-xxl));
+  line-height: 1.2;
 }
 
 .heroSection-subheading {
-  font-size: 6.25rem;
+  font-size: max(5.5vw,var(--margin-xl));
   color: var(--colour-accent);
 }
 
 .heroSection-headerPara {
-  margin-top: var(--margin-xxl);
+  margin-top: min(6vw, var(--margin-xxl));
   max-width: 70ch;
   color: hsl(0, 0%, 60%);
   line-height: 1.5;
 }
 
 .heroSection-CTAButton {
-  margin-top: var(--margin-xxxxl);
-  width: 300px;
-  height: 100px;
+  text-decoration: none;
+  padding: var(--margin-xl);
   font-family: inherit;
   font-size: var(--margin-xxl);
   color: var(--colour-fontSecondary);
   background-color: var(--colour-background);
   border: 5px solid var(--colour-accent);
   border-radius: 15px;
+  margin-top: min(8vw,var(--margin-xxl));
+  display: inline-block;
+  z-index: -1;
 }
 
 .heroSection-img {
   position: absolute;
-  font-size: var(--margin-xxxxxl);
-  left: calc(15ch - 400px);
+  right: calc(0rem - var(--margin-xxxl));
   bottom: 0;
   border-radius: 15px;
-  box-shadow: 10px 0px 10px hsl(0, 0%, 5%);
+  box-shadow: 10px 10px 10px hsl(0, 0%, 5%);
+  height: 25vw;
+  width: 25vw;
+}
+
+.desktopImg {
+  display: block;
+}
+
+.mobileImg {
+  display: none;
 }
 /*#endregion*/
 
@@ -154,10 +196,10 @@ header {
 
 .projectTile {
   cursor: pointer;
-  margin: var(--margin-m);
+  margin-inline: auto;
+  margin-block: var(--margin-s);
   padding: var(--margin-m);
   width: 300px;
-  height: 250px;
   transition: all 0.25s;
 }
 
@@ -184,4 +226,121 @@ header {
 }
 /*#endregion*/
 
+/* About Section styling */
+/*#region*/
+.aboutPage {
+  position: relative;
+  display: flex;
+  margin-block: var(--margin-xxl);
+  align-items: center;
+  justify-content: center;
+  margin-inline: var(--margin-xxxxl);
+}
 
+.aboutPage-title {
+  font-size: var(--margin-xxxxl);
+  margin: var(--margin-xl);
+}
+
+.aboutPage-subtitle {
+  color: var(--colour-accent);
+  margin-inline: var(--margin-xl);
+  margin-bottom: var(--margin-xs);
+}
+
+.aboutPage-para {
+  max-width: 75ch;
+  line-height: 1.5;
+  margin-inline: var(--margin-xl);
+  margin-bottom: var(--margin-xxl);
+  color: var(--colour-fontSecondary);
+}
+
+.aboutPage-img {
+  margin: var(--margin-xl);
+  box-shadow: 5px 0px 10px hsl(0, 0%, 3%);
+  border-radius: 15px;
+  height: 750px; 
+  width: 375px;
+}
+/*#endregion*/
+
+@media (max-width: 1200px) {
+  .projectTile-container {
+    margin-inline: var(--margin-xxxxl);
+  }
+
+  .aboutPage {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    width: 60%;
+  }
+
+  .sideHeader {
+    position: fixed;
+    left: 0;
+    bottom: var(--margin-xl);
+    align-items: center;
+  }
+
+  .heroSection {
+    width: 70%;
+  }
+
+  .heroSection-img {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    width: 300px;
+    height: 300px;
+    margin-top: var(--margin-xl);
+  }
+
+  .desktopImg {
+    display: none;
+  }
+
+  .mobileImg {
+    display: block;
+  }
+
+  .projectTile-container {
+    margin-inline: var(--margin-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sideHeader-content {
+    padding: var(--margin-xxs);
+    height: 35px;
+    width: 35px;
+  }
+  
+  .heroSection-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .aboutPage {
+    margin-inline: var(--margin-xxl);
+  }
+
+  .aboutPage-title {
+    font-size: max(8vw, var(--margin-xxxl));
+  }
+
+  .aboutPage-img {
+    height: 500px; 
+    width: 250px;
+  }
+}
