@@ -8,7 +8,7 @@ export default function SideHeader() {
             <a className="email" href="mailto:brudebattista@gmail.com" target="_blank" data-title="brudebattista@gmail.com">
                 <img className="sideHeader-content" src="%PUBLIC_URL%\assets\imgs\sideHeaderIcons\email.png" height="50px" width="50px"/> 
                 {/*
-                <div className="slideRight">
+                <div className="slideRight">w
                     <h3 className="slideRight-text">brudebattista@gmail.com</h3>
                 </div> */}
             </a>
