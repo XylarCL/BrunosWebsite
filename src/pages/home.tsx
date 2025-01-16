@@ -10,7 +10,7 @@ export default function Home() {
             
             <a href="mailto:brudebattista@gmail.com" target="_blank" className="heroSection-CTAButton">CONTACT</a>
 
-            <img className="heroSection-img desktopImg" src="\assets\imgs\Bruno\Bruno-Portrait_v01_.jpg" height="450px" width="450px"/>
+            <img className="heroSection-img desktopImg" src=".\assets\imgs\Bruno\Bruno-Portrait_v01_.jpg" height="450px" width="450px"/>
         </div>
     )
 }
