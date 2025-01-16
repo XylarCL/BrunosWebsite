@@ -2,7 +2,7 @@ export default function About() {
     return(
         <div className="aboutPage">
             
-            <img className="aboutPage-img" src="src\imgs\Bruno\Bruno-Portrait_v01_-2.jpg" height="750px" width="375px"/>
+            <img className="aboutPage-img" src="src\assets\imgs\Bruno\Bruno-Portrait_v01_-2.jpg" height="750px" width="375px"/>
         
             <div className="aboutPage-content">
                 <h1 className="aboutPage-title">ABOUT ME</h1>
