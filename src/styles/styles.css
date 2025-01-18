@@ -58,6 +58,7 @@ header {
   padding: var(--margin-m);
   transition: all 0.25s;
   cursor: pointer;
+  color: white;
 }
 
 .header-content:visited {
@@ -80,49 +81,47 @@ header {
   position: fixed;
   left: var(--margin-xl);
   bottom: var(--margin-xl);
-  align-items: center;
 }
 
 .sideHeader-content {
   background-color: white;
-  border-radius: 50%;
+  border-radius: 55px;
+  padding: var(--margin-xs);
+  margin: var(--margin-xs);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideHeader-img {
   padding: var(--margin-xs);
   margin: var(--margin-xs);
 }
 
-/*
-.slideRight {
-  width: 10000px;
+.email {
+  position: relative;
+  transition: width 1s;
+}
+
+.email span {
   overflow: hidden;
-  margin-left: 70px;
-  max-width: 220px;
-  position: absolute;
-  bottom: 50%;
 }
 
-.slideRight-text {
-  text-decoration: none;
-  color: white;
-  background-color: var(--colour-background);
+.email:is(:hover, :active, :focus) {
+  width: 100%;
 }
 
-.slideRight:hover > .slideRight-text {
-  animation: 2s slideIn;
+.email img {
+  float: left;
+  margin-right: 5px;
 }
-
-@keyframes slideIn {
-  from {
-    margin-left: -500px;
-  }
-  to {
-    margin-left: 0;
-  }
-}
-*/
 
 .sideHeader-VR {
   height: 20vh;
   width: 1px;
+  margin-left: 35px;
 }
 /*#endregion*/
 
