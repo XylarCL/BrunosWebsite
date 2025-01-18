@@ -100,28 +100,25 @@ header {
   margin: var(--margin-xs);
 }
 
-.email {
-  position: relative;
-  transition: width 1s;
-}
-
-.email span {
-  overflow: hidden;
-}
-
-.email:is(:hover, :active, :focus) {
-  width: 100%;
-}
-
-.email img {
-  float: left;
-  margin-right: 5px;
-}
-
 .sideHeader-VR {
   height: 20vh;
   width: 1px;
   margin-left: 35px;
+}
+
+.email {
+  transition: width 1s;
+  text-decoration: none;
+}
+
+.email span {
+  overflow: hidden;
+  color: black;
+}
+
+.email:is(:hover, :active, :focus) {
+  width: 100%;
+  text-decoration: none;
 }
 /*#endregion*/
 
@@ -162,7 +159,13 @@ header {
   border-radius: 15px;
   margin-top: min(8vw,var(--margin-xxl));
   display: inline-block;
-  z-index: -1;
+  transition: all 1s;
+}
+
+.heroSection-CTAButton:is(:hover, :active, :focus) {
+  transform: scale(1.05);
+  background-color: var(--colour-accent);
+  transition: all 1s;
 }
 
 .heroSection-img {
@@ -283,7 +286,6 @@ header {
     position: fixed;
     left: 0;
     bottom: var(--margin-xl);
-    align-items: center;
   }
 
   .heroSection {
@@ -320,9 +322,18 @@ header {
 
 @media (max-width: 480px) {
   .sideHeader-content {
+    height: 35px;
+    width: 35px;
+  }
+
+  .sideHeader-img  {
     padding: var(--margin-xxs);
     height: 35px;
     width: 35px;
+  }
+
+  .sideHeader-VR {
+    margin-left: 25px;
   }
   
   .heroSection-img {
