@@ -141,11 +141,35 @@ header {
   color: var(--colour-accent);
 }
 
+.heroSection-imgPara {
+  width: 100%;
+  display: flex;
+}
+
+.heroSection-imgCTA {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileImg {
+  display: none;
+}
+
 .heroSection-headerPara {
   margin-top: min(6vw, var(--margin-xxl));
   max-width: 70ch;
   color: hsl(0, 0%, 60%);
   line-height: 1.5;
+  display: inline-block;
+}
+
+.heroSection-img {
+  margin-left: auto;
+  margin-right: var(--margin-xxxl);
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px hsl(0, 0%, 5%);
+  height: 25vw;
+  width: 25vw;
 }
 
 .heroSection-CTAButton {
@@ -160,30 +184,13 @@ header {
   margin-top: min(8vw,var(--margin-xxl));
   display: inline-block;
   transition: all 1s;
+  width: min-content;
 }
 
 .heroSection-CTAButton:is(:hover, :active, :focus) {
   transform: scale(1.05);
   background-color: var(--colour-accent);
   transition: all 1s;
-}
-
-.heroSection-img {
-  position: absolute;
-  right: calc(0rem - var(--margin-xxxl));
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 10px 10px 10px hsl(0, 0%, 5%);
-  height: 25vw;
-  width: 25vw;
-}
-
-.desktopImg {
-  display: block;
-}
-
-.mobileImg {
-  display: none;
 }
 /*#endregion*/
 
@@ -293,20 +300,10 @@ header {
   }
 
   .heroSection-img {
-    position: relative;
-    left: 0;
-    bottom: auto;
+    margin-right: 0;
     width: 300px;
     height: 300px;
     margin-top: var(--margin-xl);
-  }
-
-  .desktopImg {
-    display: none;
-  }
-
-  .mobileImg {
-    display: block;
   }
 
   .projectTile-container {
@@ -314,10 +311,28 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   header {
     width: 80%;
   }
+
+  .heroSection-imgPara {
+    flex-direction: column;
+  }
+
+  .heroSection-img {
+    margin-left: 0;
+  }
+
+  .mobileImg {
+    display: block;
+  }
+
+  .desktopImg {
+    display: none;
+  }
+  
+
 }
 
 @media (max-width: 480px) {
@@ -336,6 +351,10 @@ header {
     margin-left: 25px;
   }
   
+  .heroSection-imgPara {
+    flex-direction: column;
+  }
+
   .heroSection-img {
     width: 250px;
     height: 250px;
