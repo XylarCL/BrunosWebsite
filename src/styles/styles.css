@@ -59,6 +59,7 @@ header {
   transition: all 0.25s;
   cursor: pointer;
   color: white;
+  font-size: var(--margin-xl);
 }
 
 .header-content:visited {
@@ -158,10 +159,11 @@ header {
 
 .heroSection-headerPara {
   margin-top: min(6vw, var(--margin-xxl));
-  max-width: 70ch;
+  max-width: 50ch;
   color: hsl(0, 0%, 60%);
   line-height: 1.5;
   display: inline-block;
+  font-size: var(--margin-xl);
 }
 
 .heroSection-img {
@@ -373,5 +375,9 @@ header {
   .aboutPage-img {
     height: 500px; 
     width: 250px;
+  }
+
+  .header-content {
+    font-size: var(--margin-l);
   }
 }
