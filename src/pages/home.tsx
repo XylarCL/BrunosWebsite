@@ -9,7 +9,6 @@ export default function Home() {
                     <div className="heroSection-imgCTA">
                         <p className="heroSection-headerPara">
                             I am an Electronic Engineer with a strong skillset in circuit, hardware and computer aided design. 
-                            My time at Lightricity has allowed me valuable real-world experience.  
                             </p>
                         <img className="heroSection-img mobileImg" src="\assets\imgs\Bruno\Bruno-Portrait_v01_.jpg" height="450px" width="450px"/>
                         <a href="mailto:brudebattista@gmail.com" target="_blank" className="heroSection-CTAButton">CONTACT</a>
